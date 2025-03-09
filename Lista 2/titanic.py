@@ -43,9 +43,8 @@ embarked_mapping = {"S": 0, "C": 1, "Q": 2}
 train_df["Embarked"] = train_df["Embarked"].map(embarked_mapping)
 test_df["Embarked"] = test_df["Embarked"].map(embarked_mapping)
 
-# =============================================================================
+
 # 3. Seleção de Variáveis (Features) para o Modelo
-# =============================================================================
 # Seleciona as features consideradas importantes para o modelo
 features = ["Pclass", "Sex", "Age", "SibSp", "Parch", "Fare", "Embarked"]
 
@@ -53,23 +52,19 @@ features = ["Pclass", "Sex", "Age", "SibSp", "Parch", "Fare", "Embarked"]
 X = train_df[features]
 y = train_df["Survived"]
 
-# =============================================================================
 # 4. Divisão do Conjunto de Treino para Validação Interna
-# =============================================================================
-# Divide os dados de treino em conjunto de treino e validação (80% treino e 20% validação)
+
 X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# =============================================================================
+
 # 5. Treinamento da Árvore de Decisão
-# =============================================================================
 # Inicializa e treina o classificador de árvore de decisão com profundidade máxima de 3
 clf = DecisionTreeClassifier(max_depth=3, random_state=42)
 clf.fit(X_train, y_train)
 
-# =============================================================================
+
 # 6. Avaliação do Modelo no Conjunto de Validação
-# =============================================================================
-# Realiza predições no conjunto de validação
+
 y_val_pred = clf.predict(X_val)
 
 # Calcula a acurácia e exibe a matriz de confusão
@@ -78,10 +73,9 @@ print("\nAcurácia na validação:", acc)
 print("Matriz de confusão:")
 print(confusion_matrix(y_val, y_val_pred))
 
-# =============================================================================
+
 # 7. Visualização da Árvore de Decisão
-# =============================================================================
-# Plota a árvore de decisão para visualização dos critérios de decisão
+
 plt.figure(figsize=(20, 10))
 plot_tree(clf, feature_names=features, class_names=["Não Sobreviveu", "Sobreviveu"], filled=True)
 plt.title("Árvore de Decisão - Titanic")
@@ -92,7 +86,7 @@ plt.show()
 # Faz a predição dos rótulos para o conjunto de teste usando as mesmas features
 test_pred = clf.predict(test_df[features])
 
-# Cria o DataFrame para submissão conforme o formato exigido (PassengerId e Survived)
+# Cria o DataFrame para submissão 
 submission = pd.DataFrame({
     "PassengerId": test_df["PassengerId"],
     "Survived": test_pred
