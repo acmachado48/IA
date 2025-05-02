@@ -1,0 +1,55 @@
+Algoritmo: A*_manhattan
+Tempo: 0.00s
+Nós visitados: 167
+Movimentos: 16
+
+Algoritmo: A*_misplaced
+Tempo: 0.02s
+Nós visitados: 1836
+Movimentos: 18
+
+Algoritmo: A*_misplaced
+Tempo: 0.01s
+Nós visitados: 694
+Movimentos: 16
+
+Algoritmo: BFS
+Tempo: 0.68s
+Nós visitados: 162379
+Movimentos: 26
+
+Algoritmo: BFS
+Tempo: 0.00s
+Nós visitados: 0
+Movimentos: 0
+
+Algoritmo: A*_manhattan
+Tempo: 0.00s
+Nós visitados: 40
+Movimentos: 16
+
+Algoritmo: A*_misplaced
+Tempo: 0.03s
+Nós visitados: 3388
+Movimentos: 20
+
+Algoritmo: A*_misplaced
+Tempo: 0.04s
+Nós visitados: 4785
+Movimentos: 20
+
+Algoritmo: BFS
+Tempo: 0.01s
+Nós visitados: 3394
+Movimentos: 14
+
+Algoritmo: BFS
+Tempo: 0.07s
+Nós visitados: 18340
+Movimentos: 18
+
+Algoritmo: A*_misplaced
+Tempo: 0.27s
+Nós visitados: 45569
+Movimentos: 26
+
