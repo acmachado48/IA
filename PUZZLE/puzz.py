@@ -7,12 +7,10 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLabel, QVBoxLa
                              QHBoxLayout, QMessageBox, QGridLayout, QSizePolicy)
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtCore import Qt, QTimer
-import os
-
 
 GRID_SIZE = 3
-TILE_SIZE = 100  # Tamanho fixo inicial do tile
-IMAGE_PATH = "/Users/anacarolinamachado/iA/IA/PUZZLE/IMG_3818.jpg"
+TILE_SIZE = 100  
+IMAGE_PATH = "/Users/anacarolinamachado/iA/IA/PUZZLE/IMG_4052.jpg"
 GOAL_STATE = tuple(range(GRID_SIZE * GRID_SIZE))
 
 
@@ -121,7 +119,7 @@ class PuzzleApp(QWidget):
         super().__init__()
         self.setWindowTitle("Slide Puzzle Solver")
         self.state = list(range(GRID_SIZE * GRID_SIZE))
-        self.tile_size = TILE_SIZE  # Tamanho fixo dos tiles
+        self.tile_size = TILE_SIZE
         self.tiles = cortar_imagem(IMAGE_PATH, self.tile_size)
         self.init_ui()
         self.embaralhar()
@@ -136,7 +134,6 @@ class PuzzleApp(QWidget):
             label.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
             label.setAlignment(Qt.AlignCenter)
 
-        # Define o layout da grade
         for i in range(GRID_SIZE):
             for j in range(GRID_SIZE):
                 self.grid_layout.addWidget(self.tile_labels[i * GRID_SIZE + j], i, j)
@@ -161,18 +158,15 @@ class PuzzleApp(QWidget):
         self.layout.addLayout(self.buttons_layout)
         self.setLayout(self.layout)
 
-        # Timer for animation
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.atualizar_pecas)
 
     def render_tiles(self):
-        # Use um tamanho fixo para os tiles, baseado no TILE_SIZE
         for idx, val in enumerate(self.state):
             scaled = self.tiles[val].scaled(self.tile_size, self.tile_size, Qt.KeepAspectRatio, Qt.SmoothTransformation)
             self.tile_labels[idx].setPixmap(scaled)
 
     def resizeEvent(self, event):
-        # Redimensionamento da janela para manter o layout fixo sem espaçamento entre as peças
         self.render_tiles()
 
     def embaralhar(self):
@@ -188,7 +182,6 @@ class PuzzleApp(QWidget):
         goal = GOAL_STATE
         t0 = time()
 
-        # Run the appropriate algorithm
         if metodo == "BFS":
             path, visitados = bfs(start, goal)
         elif metodo == "DFS":
@@ -204,14 +197,10 @@ class PuzzleApp(QWidget):
             return
 
         movimentos = len(path) - 1
-        self.caminho_atual = path  # Store the path for animation
-        self.index_caminho = 0  # Start index for path animation
-        self.timer.start(100)  # Start animation timer
-
-        self.salvar_resultados(metodo, tempo_execucao, visitados, movimentos)
-
-        QMessageBox.information(self, "Resolvido",
-            f"Algoritmo: {metodo}\nTempo: {tempo_execucao:.2f}s\nNós visitados: {visitados}\nMovimentos: {movimentos}")
+        self.caminho_atual = path
+        self.index_caminho = 0
+        self.resultado_pendente = (metodo, tempo_execucao, visitados, movimentos)
+        self.timer.start(100)
 
     def salvar_resultados(self, metodo, tempo_execucao, visitados, movimentos):
         file_path = "resultados_puzzle.txt"
@@ -227,7 +216,13 @@ class PuzzleApp(QWidget):
             self.render_tiles()
             self.index_caminho += 1
         else:
-            self.timer.stop()  # Stop animation when the path is finished
+            self.timer.stop()
+            if hasattr(self, "resultado_pendente"):
+                metodo, tempo_execucao, visitados, movimentos = self.resultado_pendente
+                self.salvar_resultados(metodo, tempo_execucao, visitados, movimentos)
+                QMessageBox.information(self, "Resolvido",
+                    f"Algoritmo: {metodo}\nTempo: {tempo_execucao:.2f}s\nNós visitados: {visitados}\nMovimentos: {movimentos}")
+                del self.resultado_pendente
 
 
 if __name__ == "__main__":
