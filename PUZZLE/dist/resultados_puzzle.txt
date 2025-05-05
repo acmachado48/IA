@@ -1,0 +1,15 @@
+Algoritmo: A*_manhattan
+Tempo: 0.00s
+Nós visitados: 207
+Movimentos: 18
+
+Algoritmo: A*_misplaced
+Tempo: 0.00s
+Nós visitados: 44
+Movimentos: 10
+
+Algoritmo: BFS
+Tempo: 0.09s
+Nós visitados: 22661
+Movimentos: 18
+
