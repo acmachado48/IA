@@ -7,10 +7,16 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QLabel, QVBoxLa
                              QHBoxLayout, QMessageBox, QGridLayout, QSizePolicy)
 from PyQt5.QtGui import QPixmap, QImage
 from PyQt5.QtCore import Qt, QTimer
+import os
 
 GRID_SIZE = 3
 TILE_SIZE = 100  
-IMAGE_PATH = "/Users/anacarolinamachado/iA/IA/PUZZLE/IMG_4052.jpg"
+if getattr(sys, 'frozen', False):
+    BASE_DIR = sys._MEIPASS
+else:
+    BASE_DIR = os.path.dirname(__file__)
+
+IMAGE_PATH = os.path.join(BASE_DIR, "IMG_4052.jpg")
 GOAL_STATE = tuple(range(GRID_SIZE * GRID_SIZE))
 
 
