@@ -1,0 +1,101 @@
+id,comment_text,toxic,severe_toxic,obscene,threat,insult,identity_hate
+1,"You're such an idiot and should die.",1,1,1,1,1,0
+2,"I totally agree with your point.",0,0,0,0,0,0
+3,"This is disgusting and obscene content.",1,0,1,0,0,0
+4,"I'm going to hurt you badly.",1,0,0,1,1,0
+5,"You're amazing and kind.",0,0,0,0,0,0
+6,"This is a threat to society.",1,0,0,1,0,0
+7,"You should be ashamed of yourself.",1,0,0,0,1,0
+8,"Great work, keep it up!",0,0,0,0,0,0
+9,"You filthy animal, go to hell.",1,0,1,0,1,0
+10,"I hope you suffer and die.",1,1,0,1,1,0
+11,"This is very helpful information.",0,0,0,0,0,0
+12,"You're worthless and stupid.",1,0,0,0,1,0
+13,"Thank you for sharing this.",0,0,0,0,0,0
+14,"This is offensive and hateful.",1,0,0,0,1,0
+15,"I appreciate your contribution.",0,0,0,0,0,0
+16,"You deserve to be punished.",1,0,0,0,1,0
+17,"This is well written and clear.",0,0,0,0,0,0
+18,"Good job on this project.",0,0,0,0,0,0
+19,"I found this very interesting.",0,0,0,0,0,0
+20,"Thanks for the explanation.",0,0,0,0,0,0
+21,"This makes perfect sense.",0,0,0,0,0,0
+22,"You're a complete moron.",1,0,0,0,1,0
+23,"I will kill you if you don't stop.",1,1,0,1,1,0
+24,"This is the most disgusting thing I've ever seen.",1,0,1,0,0,0
+25,"You're a piece of garbage.",1,0,0,0,1,0
+26,"I hope you get what you deserve.",1,0,0,0,1,0
+27,"This is absolutely revolting.",1,0,1,0,0,0
+28,"You should be eliminated from society.",1,0,0,1,1,0
+29,"This is pure filth.",1,0,1,0,0,0
+30,"You're a waste of space.",1,0,0,0,1,0
+31,"I'm going to make you regret this.",1,0,0,1,1,0
+32,"This is completely unacceptable.",1,0,0,0,0,0
+33,"You're a disgrace to humanity.",1,0,0,0,1,0
+34,"I hope you burn in hell.",1,1,0,0,1,0
+35,"This is sickening.",1,0,1,0,0,0
+36,"You're a pathetic excuse for a human.",1,0,0,0,1,0
+37,"I will destroy you.",1,1,0,1,1,0
+38,"This is absolutely vile.",1,0,1,0,0,0
+39,"You're a worthless piece of trash.",1,0,0,0,1,0
+40,"I hope you suffer for eternity.",1,1,0,0,1,0
+41,"This is completely disgusting.",1,0,1,0,0,0
+42,"You're a complete failure.",1,0,0,0,1,0
+43,"I'm going to ruin your life.",1,0,0,1,1,0
+44,"This is absolutely repulsive.",1,0,1,0,0,0
+45,"You're a terrible person.",1,0,0,0,1,0
+46,"I hope you get what's coming to you.",1,0,0,0,1,0
+47,"This is completely offensive.",1,0,0,0,1,0
+48,"You're a horrible human being.",1,0,0,0,1,0
+49,"I'm going to make you pay.",1,0,0,1,1,0
+50,"This is absolutely terrible.",1,0,0,0,0,0
+51,"You're a complete idiot.",1,0,0,0,1,0
+52,"I hope you get hurt.",1,0,0,1,1,0
+53,"This is completely wrong.",0,0,0,0,0,0
+54,"You're a bad person.",1,0,0,0,1,0
+55,"I'm going to stop you.",0,0,0,0,0,0
+56,"This is not acceptable.",0,0,0,0,0,0
+57,"You're wrong about this.",0,0,0,0,0,0
+58,"I hope you change your mind.",0,0,0,0,0,0
+59,"This is concerning.",0,0,0,0,0,0
+60,"You're making a mistake.",0,0,0,0,0,0
+61,"I'm going to disagree with you.",0,0,0,0,0,0
+62,"This is problematic.",0,0,0,0,0,0
+63,"You're not thinking clearly.",0,0,0,0,0,0
+64,"I hope you reconsider.",0,0,0,0,0,0
+65,"This is disappointing.",0,0,0,0,0,0
+66,"You're being unreasonable.",0,0,0,0,0,0
+67,"I'm going to oppose this.",0,0,0,0,0,0
+68,"This is not good.",0,0,0,0,0,0
+69,"You're being difficult.",0,0,0,0,0,0
+70,"I hope you understand.",0,0,0,0,0,0
+71,"This is concerning to me.",0,0,0,0,0,0
+72,"You're not being fair.",0,0,0,0,0,0
+73,"I'm going to challenge this.",0,0,0,0,0,0
+74,"This is not right.",0,0,0,0,0,0
+75,"You're being stubborn.",0,0,0,0,0,0
+76,"I hope you see the error.",0,0,0,0,0,0
+77,"This is troubling.",0,0,0,0,0,0
+78,"You're not listening.",0,0,0,0,0,0
+79,"I'm going to disagree.",0,0,0,0,0,0
+80,"This is not appropriate.",0,0,0,0,0,0
+81,"You're being rude.",1,0,0,0,1,0
+82,"I hope you learn from this.",0,0,0,0,0,0
+83,"This is not helpful.",0,0,0,0,0,0
+84,"You're being unhelpful.",0,0,0,0,0,0
+85,"I'm going to criticize this.",0,0,0,0,0,0
+86,"This is not constructive.",0,0,0,0,0,0
+87,"You're being negative.",0,0,0,0,0,0
+88,"I hope you improve.",0,0,0,0,0,0
+89,"This is not productive.",0,0,0,0,0,0
+90,"You're being uncooperative.",0,0,0,0,0,0
+91,"I'm going to object to this.",0,0,0,0,0,0
+92,"This is not beneficial.",0,0,0,0,0,0
+93,"You're being difficult to work with.",0,0,0,0,0,0
+94,"I hope you change your approach.",0,0,0,0,0,0
+95,"This is not effective.",0,0,0,0,0,0
+96,"You're being counterproductive.",0,0,0,0,0,0
+97,"I'm going to oppose this approach.",0,0,0,0,0,0
+98,"This is not the right way.",0,0,0,0,0,0
+99,"You're being unreasonable about this.",0,0,0,0,0,0
+100,"I hope you reconsider your position.",0,0,0,0,0,0 
